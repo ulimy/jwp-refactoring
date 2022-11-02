@@ -31,7 +31,8 @@ public class TableGroup {
     @JoinColumn(name = "table_group_id")
     private List<OrderTable> values = new ArrayList<>();
 
-    protected TableGroup() {
+    public TableGroup() {
+        createdDate = LocalDateTime.now();
     }
 
     public TableGroup(List<OrderTable> orderTables) {
